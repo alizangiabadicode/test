@@ -97,10 +97,10 @@ export default defineComponent({
       // hanlde lazy loading
       if (lazy.value && !hasDefaultSlot.value) {
         handleImageLazyload();
+      }
+      if (lazy.value || !props.src)
         // @ts-ignore
         imageRef.value && (imageRef.value.src = defaultImage.value);
-      }
-
     });
 
     return {
